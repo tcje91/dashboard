@@ -3,10 +3,68 @@
 
 html,
 body {
-  margin: 0; }
+  margin: 0;
+  height: 100%; }
 
 body {
-  background-color: #fafbfc; }
+  background-color: #f4f8f9;
+  color: #323c47;
+  letter-spacing: 0.1rem; }
 
-h1 {
-  color: #4da1ff; }
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: 7rem 1fr / 8rem 1fr 16rem;
+  grid-template-areas: 'nav header header' 'nav main forecast'; }
+  .container nav {
+    grid-area: nav;
+    background-color: #fafbfc;
+    border-right: solid 1px #b8b8b8; }
+    .container nav .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .container nav .nav-links a {
+        text-decoration: none;
+        color: #4da1ff;
+        padding: 1.5rem;
+        width: 100%;
+        text-align: center;
+        position: relative; }
+        .container nav .nav-links a.logo {
+          margin-bottom: 8rem; }
+        .container nav .nav-links a:hover {
+          background-color: #f4f8f9; }
+        .container nav .nav-links a.active:before {
+          content: '';
+          height: 100%;
+          width: 20px;
+          background-color: #4da1ff;
+          position: absolute;
+          left: -10px;
+          top: 0;
+          border-radius: 10px; }
+  .container header {
+    grid-area: header;
+    background-color: #fafbfc;
+    border-bottom: solid 1px #b8b8b8;
+    display: flex;
+    align-items: center; }
+    .container header input[type='text'] {
+      width: 80%;
+      padding: 1rem;
+      border: none;
+      background-color: inherit;
+      font-size: 1rem;
+      letter-spacing: 0.1rem; }
+      .container header input[type='text']:focus {
+        outline: none; }
+    .container header i {
+      margin-left: 4rem;
+      color: #b8b8b8; }
+  .container .main {
+    grid-area: main; }
+  .container .forecast {
+    grid-area: forecast;
+    background-color: #fafbfc; }

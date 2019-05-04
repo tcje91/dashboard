@@ -7,12 +7,96 @@
 html,
 body {
   margin: 0;
+  height: 100%;
 }
 
 body {
-  background-color: $bgLight;
+  background-color: $bgDark;
+  color: $primary;
+  letter-spacing: 0.1rem;
 }
 
-h1 {
-  color: $highlight1;
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template: 7rem 1fr / 8rem 1fr 16rem;
+  grid-template-areas:
+    'nav header header'
+    'nav main forecast';
+
+  nav {
+    grid-area: nav;
+    background-color: $bgLight;
+    border-right: solid 1px $secondary;
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: $highlight1;
+        padding: 1.5rem;
+        width: 100%;
+        text-align: center;
+        position: relative;
+
+        &.logo {
+          margin-bottom: 8rem;
+        }
+
+        &:hover {
+          background-color: $bgDark;
+        }
+
+        &.active:before {
+          content: '';
+          height: 100%;
+          width: 20px;
+          background-color: $highlight1;
+          position: absolute;
+          left: -10px;
+          top: 0;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  header {
+    grid-area: header;
+    background-color: $bgLight;
+    border-bottom: solid 1px $secondary;
+    display: flex;
+    align-items: center;
+
+    input[type='text'] {
+      width: 80%;
+      padding: 1rem;
+      border: none;
+      background-color: inherit;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    i {
+      margin-left: 4rem;
+      color: $secondary;
+    }
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .forecast {
+    grid-area: forecast;
+    background-color: $bgLight;
+  }
 }
