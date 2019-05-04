@@ -70,27 +70,43 @@ a {
     .container header i {
       margin-left: 4rem;
       color: #b8b8b8; }
-  .container .main {
+  .container #main {
     grid-area: main; }
-  .container .side-bar {
+  .container #side-bar {
     grid-area: sidebar;
     background-color: #fafbfc;
     display: flex;
     flex-direction: column;
     padding: 2rem; }
-    .container .side-bar .forecast {
+    .container #side-bar .forecast {
       display: flex;
       align-items: center; }
-      .container .side-bar .forecast .fas {
-        padding: 1rem;
-        color: #4da1ff; }
-    .container .side-bar .event-card {
+      .container #side-bar .forecast .icon {
+        position: relative; }
+        .container #side-bar .forecast .icon .notification {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0.7rem;
+          right: 0.7rem;
+          background-color: #ff6d4a;
+          border-radius: 50%;
+          height: 24px;
+          width: 24px;
+          text-align: center; }
+          .container #side-bar .forecast .icon .notification p {
+            color: #fafbfc; }
+        .container #side-bar .forecast .icon .fas {
+          padding: 1rem;
+          color: #4da1ff; }
+    .container #side-bar .event-card {
       padding: 1rem 0; }
-      .container .side-bar .event-card .time {
+      .container #side-bar .event-card .time {
         color: #b8b8b8; }
-      .container .side-bar .event-card .description {
+      .container #side-bar .event-card .description {
         color: #323c47; }
-      .container .side-bar .event-card.notification .description:before {
+      .container #side-bar .event-card.notification .description:before {
         content: '';
         width: 10px;
         height: 10px;
@@ -99,5 +115,5 @@ a {
         float: left;
         margin: 0.2rem;
         margin-right: 0.5rem; }
-      .container .side-bar .event-card.complete .description {
+      .container #side-bar .event-card.complete .description {
         text-decoration: line-through; }

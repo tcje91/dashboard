@@ -100,11 +100,11 @@ a {
     }
   }
 
-  .main {
+  #main {
     grid-area: main;
   }
 
-  .side-bar {
+  #side-bar {
     grid-area: sidebar;
     background-color: $bgLight;
     display: flex;
@@ -114,10 +114,30 @@ a {
     .forecast {
       display: flex;
       align-items: center;
+      .icon {
+        position: relative;
 
-      .fas {
-        padding: 1rem;
-        color: $highlight1;
+        .notification {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 0.7rem;
+          right: 0.7rem;
+          background-color: $highlight2;
+          border-radius: 50%;
+          height: 24px;
+          width: 24px;
+          text-align: center;
+
+          p {
+            color: $bgLight;
+          }
+        }
+        .fas {
+          padding: 1rem;
+          color: $highlight1;
+        }
       }
     }
 
