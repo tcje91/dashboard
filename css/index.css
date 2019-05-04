@@ -9,14 +9,22 @@ body {
 body {
   background-color: #f4f8f9;
   color: #323c47;
-  letter-spacing: 0.1rem; }
+  letter-spacing: 0.1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+p {
+  margin: 0.7rem 0; }
+
+a {
+  color: #323c47;
+  text-decoration: none; }
 
 .container {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template: 7rem 1fr / 8rem 1fr 16rem;
-  grid-template-areas: 'nav header header' 'nav main forecast'; }
+  grid-template: 7rem 1fr / 8rem 1fr 20rem;
+  grid-template-areas: 'nav header header' 'nav main sidebar'; }
   .container nav {
     grid-area: nav;
     background-color: #fafbfc;
@@ -26,7 +34,6 @@ body {
       flex-direction: column;
       align-items: center; }
       .container nav .nav-links a {
-        text-decoration: none;
         color: #4da1ff;
         padding: 1.5rem;
         width: 100%;
@@ -65,6 +72,32 @@ body {
       color: #b8b8b8; }
   .container .main {
     grid-area: main; }
-  .container .forecast {
-    grid-area: forecast;
-    background-color: #fafbfc; }
+  .container .side-bar {
+    grid-area: sidebar;
+    background-color: #fafbfc;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem; }
+    .container .side-bar .forecast {
+      display: flex;
+      align-items: center; }
+      .container .side-bar .forecast .fas {
+        padding: 1rem;
+        color: #4da1ff; }
+    .container .side-bar .event-card {
+      padding: 1rem 0; }
+      .container .side-bar .event-card .time {
+        color: #b8b8b8; }
+      .container .side-bar .event-card .description {
+        color: #323c47; }
+      .container .side-bar .event-card.notification .description:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: #ff6d4a;
+        border-radius: 50%;
+        float: left;
+        margin: 0.2rem;
+        margin-right: 0.5rem; }
+      .container .side-bar .event-card.complete .description {
+        text-decoration: line-through; }

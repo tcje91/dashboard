@@ -14,16 +14,26 @@ body {
   background-color: $bgDark;
   color: $primary;
   letter-spacing: 0.1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+  margin: 0.7rem 0;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
 }
 
 .container {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template: 7rem 1fr / 8rem 1fr 16rem;
+  grid-template: 7rem 1fr / 8rem 1fr 20rem;
   grid-template-areas:
     'nav header header'
-    'nav main forecast';
+    'nav main sidebar';
 
   nav {
     grid-area: nav;
@@ -36,7 +46,6 @@ body {
       align-items: center;
 
       a {
-        text-decoration: none;
         color: $highlight1;
         padding: 1.5rem;
         width: 100%;
@@ -95,8 +104,50 @@ body {
     grid-area: main;
   }
 
-  .forecast {
-    grid-area: forecast;
+  .side-bar {
+    grid-area: sidebar;
     background-color: $bgLight;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    .forecast {
+      display: flex;
+      align-items: center;
+
+      .fas {
+        padding: 1rem;
+        color: $highlight1;
+      }
+    }
+
+    .event-card {
+      padding: 1rem 0;
+      .time {
+        color: $secondary;
+      }
+
+      .description {
+        color: $primary;
+      }
+
+      &.notification {
+        .description:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: $highlight2;
+          border-radius: 50%;
+          float: left;
+          margin: 0.2rem;
+          margin-right: 0.5rem;
+        }
+      }
+      &.complete {
+        .description {
+          text-decoration: line-through;
+        }
+      }
+    }
   }
 }
