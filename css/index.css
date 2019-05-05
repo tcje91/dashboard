@@ -104,6 +104,7 @@ button {
   .container #main {
     grid-area: main;
     padding: 3rem;
+    padding-bottom: 0;
     position: relative; }
     .container #main h1 {
       margin-top: 0;
@@ -218,6 +219,13 @@ button {
           .container #main .card-container .card .card-info p {
             color: #b8b8b8;
             margin: 0; }
+    .container #main.table .card-container.user-card-container .card.user-card {
+      width: 100%;
+      grid-template-columns: 120px auto 1fr 20rem;
+      grid-template-areas: 'img info . notifs'; }
+      .container #main.table .card-container.user-card-container .card.user-card .user-notifications {
+        margin: 0;
+        align-self: center; }
   .container #side-bar {
     grid-area: sidebar;
     background-color: #fafbfc;
@@ -271,7 +279,7 @@ button {
     padding: 1rem; }
     .container #main,
     .container #sidebar {
-      padding: 2rem 0; }
+      padding: 2rem 0 0 0; }
     .container #main #layout-selector {
       display: none; }
     .container #main .card-container {
@@ -279,7 +287,7 @@ button {
       align-items: center; }
       .container #main .card-container .card {
         min-width: 350px;
-        margin: 0.5rem; }
+        margin: 0.5rem 0; }
     .container #main h1 {
       margin-bottom: 1rem; }
     .container #main button {

@@ -143,6 +143,7 @@ button {
   #main {
     grid-area: main;
     padding: 3rem;
+    padding-bottom: 0;
     position: relative;
 
     h1 {
@@ -300,6 +301,21 @@ button {
           p {
             color: $secondary;
             margin: 0;
+          }
+        }
+      }
+    }
+
+    &.table {
+      .card-container.user-card-container {
+        .card.user-card {
+          width: 100%;
+          grid-template-columns: 120px auto 1fr 20rem;
+          grid-template-areas: 'img info . notifs';
+
+          .user-notifications {
+            margin: 0;
+            align-self: center;
           }
         }
       }

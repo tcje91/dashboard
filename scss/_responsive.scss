@@ -10,7 +10,7 @@
 
     #main,
     #sidebar {
-      padding: 2rem 0;
+      padding: 2rem 0 0 0;
     }
 
     #main {
@@ -22,7 +22,7 @@
         align-items: center;
         .card {
           min-width: 350px;
-          margin: 0.5rem;
+          margin: 0.5rem 0;
         }
       }
       h1 {
