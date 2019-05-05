@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/index.css" />
+    <script type="text/javascript" src="./js/index.js"></script>
   </head>
   <body>
     <div class="container">
@@ -39,19 +40,26 @@
         </div>
       </div>
       <section id="main">
-        <div class="layout-selector">
-          <div class="option">
+        <div id="layout-selector">
+          <div>
             <input
               type="radio"
               value="cards"
               id="cards"
               name="layout"
+              onclick="handleLayoutChange();"
               checked
             />
             <label for="cards"><i class="fas fa-th-large"></i>Cards</label>
           </div>
-          <div class="option">
-            <input type="radio" value="table" id="table" name="layout" />
+          <div>
+            <input
+              type="radio"
+              value="table"
+              id="table"
+              name="layout"
+              onclick="handleLayoutChange();"
+            />
             <label for="table"><i class="fas fa-list"></i>Table</label>
           </div>
         </div>

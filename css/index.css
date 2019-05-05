@@ -113,7 +113,7 @@ button {
     .container #main button {
       display: inline-block;
       margin-left: 1.5rem; }
-    .container #main .layout-selector {
+    .container #main #layout-selector {
       position: absolute;
       top: 0;
       right: 0;
@@ -125,23 +125,23 @@ button {
       width: fit-content;
       border-radius: 6px;
       color: #b8b8b8; }
-      .container #main .layout-selector i {
+      .container #main #layout-selector i {
         margin-right: 0.5rem; }
-      .container #main .layout-selector label {
+      .container #main #layout-selector label {
         padding: 0.6rem;
         display: block;
         border-radius: 4px;
         margin: 0.2rem;
         cursor: pointer; }
-      .container #main .layout-selector input[type='radio'] {
+      .container #main #layout-selector input[type='radio'] {
         display: none; }
-      .container #main .layout-selector input[type='radio']:checked ~ label {
+      .container #main #layout-selector input[type='radio']:checked ~ label {
         background-color: #fafbfc;
         color: #323c47;
         -webkit-box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.05);
         -moz-box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.05);
         box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.05); }
-        .container #main .layout-selector input[type='radio']:checked ~ label i {
+        .container #main #layout-selector input[type='radio']:checked ~ label i {
           color: #4da1ff; }
     .container #main .highlight1 {
       color: #4da1ff; }
@@ -272,6 +272,8 @@ button {
     .container #main,
     .container #sidebar {
       padding: 2rem 0; }
+    .container #main #layout-selector {
+      display: none; }
     .container #main .card-container {
       flex-flow: column nowrap;
       align-items: center; }
