@@ -68,6 +68,9 @@ button {
     grid-area: nav;
     background-color: $bgLight;
     border-right: solid 1px $secondary;
+    position: fixed;
+    height: 100%;
+    width: 8rem;
 
     .nav-links {
       display: flex;
@@ -150,7 +153,7 @@ button {
 
     button {
       display: inline-block;
-      margin-left: 3rem;
+      margin-left: 1.5rem;
     }
 
     .highlight1 {
@@ -164,6 +167,14 @@ button {
     .card-container {
       display: flex;
       flex-flow: row wrap;
+
+      &.user-card-container {
+        justify-content: space-between;
+
+        .card {
+          margin-right: 0;
+        }
+      }
 
       .card {
         min-width: 24rem;
@@ -204,6 +215,11 @@ button {
 
               p {
                 margin: 0;
+                font-size: 0.8rem;
+              }
+
+              h3 {
+                font-size: 1.6rem;
               }
             }
 
@@ -274,10 +290,10 @@ button {
           border-radius: 50%;
           height: 24px;
           width: 24px;
-          text-align: center;
 
           p {
             color: $bgLight;
+            font-size: 0.8rem;
           }
         }
         .fas {
@@ -317,3 +333,5 @@ button {
     }
   }
 }
+
+@import 'responsive';

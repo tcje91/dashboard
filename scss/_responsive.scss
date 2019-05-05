@@ -1,0 +1,49 @@
+@include mediaMed {
+  .container {
+    grid-template: 7rem 7rem auto auto / 1fr auto;
+    grid-template-areas:
+      'user user'
+      'header header'
+      'sidebar sidebar'
+      'main main';
+    padding: 1rem;
+
+    #main,
+    #sidebar {
+      padding: 2rem 0;
+    }
+
+    #main {
+      .card-container {
+        flex-flow: column nowrap;
+        align-items: center;
+        .card {
+          min-width: 350px;
+          margin: 0.5rem;
+        }
+      }
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        margin-left: 0.5rem;
+      }
+    }
+
+    nav {
+      transform: translateX(-12rem);
+    }
+
+    header {
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+
+    header,
+    .user-panel {
+      border: none;
+    }
+  }
+}
