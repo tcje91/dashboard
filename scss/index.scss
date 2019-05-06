@@ -55,6 +55,14 @@ button {
   }
 }
 
+.highlight1 {
+  color: $highlight1;
+}
+
+.highlight2 {
+  color: $highlight2;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -101,6 +109,7 @@ button {
           left: -10px;
           top: 0;
           border-radius: 10px;
+          @include shadow;
         }
       }
     }
@@ -204,14 +213,6 @@ button {
           color: $highlight1;
         }
       }
-    }
-
-    .highlight1 {
-      color: $highlight1;
-    }
-
-    .highlight2 {
-      color: $highlight2;
     }
 
     .card-container {

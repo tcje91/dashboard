@@ -5,10 +5,12 @@ $secondary: #b8b8b8;
 $highlight1: #4da1ff;
 $highlight2: #ff6d4a;
 
+$shadow-opacity: 0.05;
+
 @mixin shadow {
-  -webkit-box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, $shadow-opacity);
+  -moz-box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, $shadow-opacity);
+  box-shadow: 3px 3px 25px 0px rgba(0, 0, 0, $shadow-opacity);
 }
 
 @mixin mediaMed {
