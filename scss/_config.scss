@@ -16,3 +16,9 @@ $highlight2: #ff6d4a;
     @content;
   }
 }
+
+@mixin mediaSml {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}

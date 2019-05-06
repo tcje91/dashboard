@@ -1,18 +1,11 @@
 @include mediaMed {
   .container {
-    grid-template: auto 7rem auto auto auto / 1fr;
+    grid-template: 7rem auto auto auto / 8rem 1fr;
     grid-template-areas:
-      'nav'
-      'user'
-      'header'
-      'sidebar'
-      'main';
-    padding: 1rem;
-
-    #main,
-    #sidebar {
-      padding: 2rem 0 0 0;
-    }
+      'nav user'
+      'nav header'
+      'nav sidebar'
+      'nav main';
 
     #main {
       #layout-selector {
@@ -35,6 +28,33 @@
       }
     }
 
+    header {
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+
+    header,
+    .user-panel {
+      border: none;
+    }
+  }
+}
+
+@include mediaSml {
+  .container {
+    padding: 1rem;
+    grid-template: auto 7rem auto auto auto / 1fr;
+    grid-template-areas:
+      'nav nav'
+      'user user'
+      'header header'
+      'sidebar sidebar'
+      'main main'; // for some reason this template seems to improve layout despite only one column ??
+    #main,
+    #sidebar {
+      padding: 2rem 0 0 0;
+    }
     nav {
       position: relative;
       width: 100%;
@@ -57,17 +77,6 @@
           }
         }
       }
-    }
-
-    header {
-      i {
-        margin-left: 0.5rem;
-      }
-    }
-
-    header,
-    .user-panel {
-      border: none;
     }
   }
 }

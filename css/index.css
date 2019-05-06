@@ -274,12 +274,8 @@ button {
 
 @media screen and (max-width: 768px) {
   .container {
-    grid-template: auto 7rem auto auto auto / 1fr;
-    grid-template-areas: 'nav' 'user' 'header' 'sidebar' 'main';
-    padding: 1rem; }
-    .container #main,
-    .container #sidebar {
-      padding: 2rem 0 0 0; }
+    grid-template: 7rem auto auto auto / 8rem 1fr;
+    grid-template-areas: 'nav user' 'nav header' 'nav sidebar' 'nav main'; }
     .container #main #layout-selector {
       display: none; }
     .container #main .card-container {
@@ -292,6 +288,20 @@ button {
       margin-bottom: 1rem; }
     .container #main button {
       margin-left: 0.5rem; }
+    .container header i {
+      margin-left: 0.5rem; }
+    .container header,
+    .container .user-panel {
+      border: none; } }
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 1rem;
+    grid-template: auto 7rem auto auto auto / 1fr;
+    grid-template-areas: 'nav nav' 'user user' 'header header' 'sidebar sidebar' 'main main'; }
+    .container #main,
+    .container #sidebar {
+      padding: 2rem 0 0 0; }
     .container nav {
       position: relative;
       width: 100%;
@@ -307,9 +317,4 @@ button {
         .container nav .nav-links a.active {
           border-bottom: solid 3px #4da1ff; }
           .container nav .nav-links a.active::before {
-            display: none; }
-    .container header i {
-      margin-left: 0.5rem; }
-    .container header,
-    .container .user-panel {
-      border: none; } }
+            display: none; } }
