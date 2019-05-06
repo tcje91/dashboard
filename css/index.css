@@ -181,7 +181,7 @@ button {
           margin: 0; }
         .container #main .card-container .card.user-card {
           display: grid;
-          grid-template: auto auto / auto auto;
+          grid-template: auto auto / auto 1fr;
           grid-template-areas: 'img info' 'notifs notifs'; }
           .container #main .card-container .card.user-card .user-notifications {
             grid-area: notifs;

@@ -244,7 +244,7 @@ button {
 
         &.user-card {
           display: grid;
-          grid-template: auto auto / auto auto;
+          grid-template: auto auto / auto 1fr;
           grid-template-areas:
             'img info'
             'notifs notifs';
