@@ -9,7 +9,7 @@ body {
 body {
   background-color: #f4f8f9;
   color: #323c47;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
 
 p {
@@ -44,7 +44,7 @@ button {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template: 7rem 1fr / 8rem 1fr 20rem;
+  grid-template: auto 1fr / 8rem 1fr 20rem;
   grid-template-areas: 'nav header user' 'nav main sidebar'; }
   .container nav {
     grid-area: nav;
@@ -64,7 +64,7 @@ button {
         text-align: center;
         position: relative; }
         .container nav .nav-links a.logo {
-          margin-bottom: 8rem; }
+          margin: 2rem 0 4rem 0; }
         .container nav .nav-links a:hover {
           background-color: #f4f8f9; }
         .container nav .nav-links a.active:before {
@@ -81,9 +81,13 @@ button {
     background-color: #fafbfc;
     border-bottom: solid 1px #b8b8b8;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding: 3rem; }
+    .container header form {
+      width: 100%; }
     .container header input[type='text'] {
       width: 80%;
+      height: auto;
       padding: 1rem;
       border: none;
       background-color: inherit;
@@ -92,7 +96,6 @@ button {
       .container header input[type='text']:focus {
         outline: none; }
     .container header i {
-      margin-left: 4rem;
       color: #b8b8b8; }
   .container .user-panel {
     grid-area: user;
@@ -101,6 +104,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-around; }
+    .container .user-panel .img-wrapper {
+      margin: 1rem; }
   .container #main {
     grid-area: main;
     padding: 3rem;
@@ -254,6 +259,8 @@ button {
         .container #side-bar .forecast .icon .fas {
           padding: 1rem;
           color: #4da1ff; }
+      .container #side-bar .forecast h4 {
+        color: #b8b8b8; }
     .container #side-bar .event-card {
       padding: 1rem 0; }
       .container #side-bar .event-card .time {
@@ -271,6 +278,14 @@ button {
         margin-right: 0.5rem; }
       .container #side-bar .event-card.complete .description {
         text-decoration: line-through; }
+      .container #side-bar .event-card .event-actions {
+        margin-top: 1rem; }
+        .container #side-bar .event-card .event-actions a {
+          font-size: 80%;
+          padding: 1rem;
+          color: #b8b8b8; }
+          .container #side-bar .event-card .event-actions a:hover {
+            color: #323c47; }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -288,8 +303,11 @@ button {
       margin-bottom: 1rem; }
     .container #main button {
       margin-left: 0.5rem; }
-    .container header i {
-      margin-left: 0.5rem; }
+    .container header {
+      padding: 0.5rem; }
+      .container header input[type='text'] {
+        width: 100%;
+        font-size: 80%; }
     .container header,
     .container .user-panel {
       border: none; } }
@@ -297,7 +315,7 @@ button {
 @media screen and (max-width: 500px) {
   .container {
     padding: 1rem;
-    grid-template: auto 7rem auto auto auto / 1fr;
+    grid-template: auto auto auto auto auto / 1fr;
     grid-template-areas: 'nav nav' 'user user' 'header header' 'sidebar sidebar' 'main main'; }
     .container #main,
     .container #sidebar {
@@ -317,4 +335,7 @@ button {
         .container nav .nav-links a.active {
           border-bottom: solid 3px #4da1ff; }
           .container nav .nav-links a.active::before {
-            display: none; } }
+            display: none; }
+    .container .user-panel {
+      margin-top: 1rem;
+      padding: 1rem; } }

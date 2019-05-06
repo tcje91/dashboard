@@ -29,8 +29,10 @@
     }
 
     header {
-      i {
-        margin-left: 0.5rem;
+      padding: 0.5rem;
+      input[type='text'] {
+        width: 100%;
+        font-size: 80%;
       }
     }
 
@@ -44,7 +46,7 @@
 @include mediaSml {
   .container {
     padding: 1rem;
-    grid-template: auto 7rem auto auto auto / 1fr;
+    grid-template: auto auto auto auto auto / 1fr;
     grid-template-areas:
       'nav nav'
       'user user'
@@ -77,6 +79,11 @@
           }
         }
       }
+    }
+
+    .user-panel {
+      margin-top: 1rem;
+      padding: 1rem;
     }
   }
 }

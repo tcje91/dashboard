@@ -13,7 +13,7 @@ body {
 body {
   background-color: $bgDark;
   color: $primary;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -59,7 +59,7 @@ button {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template: 7rem 1fr / 8rem 1fr 20rem;
+  grid-template: auto 1fr / 8rem 1fr 20rem;
   grid-template-areas:
     'nav header user'
     'nav main sidebar';
@@ -85,7 +85,7 @@ button {
         position: relative;
 
         &.logo {
-          margin-bottom: 8rem;
+          margin: 2rem 0 4rem 0;
         }
 
         &:hover {
@@ -112,9 +112,15 @@ button {
     border-bottom: solid 1px $secondary;
     display: flex;
     align-items: center;
+    padding: 3rem;
+
+    form {
+      width: 100%;
+    }
 
     input[type='text'] {
       width: 80%;
+      height: auto;
       padding: 1rem;
       border: none;
       background-color: inherit;
@@ -127,7 +133,6 @@ button {
     }
 
     i {
-      margin-left: 4rem;
       color: $secondary;
     }
   }
@@ -138,6 +143,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    .img-wrapper {
+      margin: 1rem;
+    }
   }
 
   #main {
@@ -357,6 +366,9 @@ button {
           color: $highlight1;
         }
       }
+      h4 {
+        color: $secondary;
+      }
     }
 
     .event-card {
@@ -384,6 +396,19 @@ button {
       &.complete {
         .description {
           text-decoration: line-through;
+        }
+      }
+
+      .event-actions {
+        margin-top: 1rem;
+        a {
+          font-size: 80%;
+          padding: 1rem;
+          color: $secondary;
+
+          &:hover {
+            color: $primary;
+          }
         }
       }
     }
