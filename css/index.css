@@ -274,8 +274,8 @@ button {
 
 @media screen and (max-width: 768px) {
   .container {
-    grid-template: 7rem 7rem auto auto / 1fr auto;
-    grid-template-areas: 'user user' 'header header' 'sidebar sidebar' 'main main';
+    grid-template: auto 7rem auto auto auto / 1fr;
+    grid-template-areas: 'nav' 'user' 'header' 'sidebar' 'main';
     padding: 1rem; }
     .container #main,
     .container #sidebar {
@@ -293,7 +293,21 @@ button {
     .container #main button {
       margin-left: 0.5rem; }
     .container nav {
-      transform: translateX(-12rem); }
+      position: relative;
+      width: 100%;
+      border-right: none;
+      border-bottom: solid 1px #b8b8b8; }
+      .container nav .nav-links {
+        flex-direction: row;
+        padding: 1rem 1rem 0 1rem; }
+        .container nav .nav-links .logo {
+          display: none; }
+        .container nav .nav-links a {
+          padding: 0.5rem; }
+        .container nav .nav-links a.active {
+          border-bottom: solid 3px #4da1ff; }
+          .container nav .nav-links a.active::before {
+            display: none; }
     .container header i {
       margin-left: 0.5rem; }
     .container header,

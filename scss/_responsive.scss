@@ -1,11 +1,12 @@
 @include mediaMed {
   .container {
-    grid-template: 7rem 7rem auto auto / 1fr auto;
+    grid-template: auto 7rem auto auto auto / 1fr;
     grid-template-areas:
-      'user user'
-      'header header'
-      'sidebar sidebar'
-      'main main';
+      'nav'
+      'user'
+      'header'
+      'sidebar'
+      'main';
     padding: 1rem;
 
     #main,
@@ -35,7 +36,27 @@
     }
 
     nav {
-      transform: translateX(-12rem);
+      position: relative;
+      width: 100%;
+      border-right: none;
+      border-bottom: solid 1px $secondary;
+
+      .nav-links {
+        flex-direction: row;
+        padding: 1rem 1rem 0 1rem;
+        .logo {
+          display: none;
+        }
+        a {
+          padding: 0.5rem;
+        }
+        a.active {
+          border-bottom: solid 3px $highlight1;
+          &::before {
+            display: none;
+          }
+        }
+      }
     }
 
     header {
